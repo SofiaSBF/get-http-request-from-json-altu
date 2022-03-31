@@ -5,7 +5,7 @@ Extrai todos as informações do http request do ALTU e gera um CSV
 ## Instalação
 1. Clone esse repositório na sua maquina via terminal (Linux). 
   - Execute o comando no local que deseja clonar: 
-  ```git clone git@github.com:cesargos/get-http-request-from-json-altu.git```
+  - ```git clone git@github.com:cesargos/get-http-request-from-json-altu.git```
 3. Entre na pasta raiz dele via terminal (Linux)
   - ```cd get-http-request-from-json-altu```
 4. Execute os seguintes comandos para instalar:
