@@ -1,7 +1,7 @@
 // add your CLI-specific functionality here, which will then be accessible
 // to your commands
 module.exports = toolbox => {
-  toolbox.generateCSV = ({ nodesInfo }) => {
+  toolbox.generateCSV = async ({ nodesInfo }) => {
     const {
       print: { info },
       template: { generate }
