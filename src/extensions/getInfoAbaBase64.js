@@ -1,9 +1,9 @@
 // add your CLI-specific functionality here, which will then be accessible
 // to your commands
 module.exports = toolbox => {
-  toolbox.getInfoAbaBase64 = ({ abaBase64,env_vars }) => {
+  toolbox.getInfoAbaBase64 = ({ abaBase64, env_vars }) => {
     let abaJson = buf.toString(abaBase64);
-    let abaObj = JSON.parse(abaJson);
+    let abaObj = JSON.parse(abaJson.replace(/(?:<\?\s*)?\$env_vars\.(\w+)(?:\s*\?>)?/g,(matched,envVarName)=>env_vars[envVarName] || matched));
       return abaObj.config.cells
           .filter((node)=> Array.isArray(node.actions))
           .reduce((ret, node) => {
