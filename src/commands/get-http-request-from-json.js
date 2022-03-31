@@ -4,21 +4,26 @@ const command = {
     const { print } = toolbox
     
     try{
-      var files = toolbox.listValidJsonFile();
-      print.muted('ijoijoijjlkjlkj')
+      var files = await toolbox.listValidJsonFile();
     }catch(err){
       print.error(err.message || 'Erro ao tentar ler os arquivos');
       return
     }
+   /* try{
+      var askOwner = { type: 'input', name: 'age', message: 'How old are you?' }
+    }catch(err){
+      print.error(err.message || 'Erro ao tentar ler o conteúdo arquivos');
+      return
+    }*/
 
     try{
-      var nodesInfo = files.map(file => toolbox.getInfoFromFile(file))
+      var nodesInfo = {...files.map(file =>toolbox.getInfoFromFile({file,owner:'oi'}))}
     }catch(err){
       print.error(err.message || 'Erro ao tentar ler o conteúdo arquivos');
       return
     }
 
-
+    //print.debug(files)
   }
 }
 
