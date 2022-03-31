@@ -8,7 +8,7 @@ module.exports = toolbox => {
     } = toolbox
 
     await generate({
-      template: 'csvModel.js.ejs',
+      template: 'csvModel.csv.ejs',
       target: `./endpoints_from_altu_${Date.now()}.csv`,
       props: { nodesInfo }
     })
