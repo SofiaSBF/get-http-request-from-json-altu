@@ -12,7 +12,15 @@ module.exports = toolbox => {
                   .filter(action=>action.name==="http_request"))
               return ret
           },[])
-          .map(node=>({bot,owner,node:node.node, aba:abaObj.name, endpoint: node.parameters.config.url}))  
+          .map(node=>(
+            {
+              bot: bot.replace(/\s+/g,'_').replace(/\W/g, ''),
+              owner,
+              node: node.node, 
+              aba: abaObj.name.replace(/\s+/g,'_').replace(/\W/g, ''), 
+              endpoint: node.parameters.config.url.replace(/\?.+?=.+$/g,'')
+            }
+          ))  
 
   }
 
