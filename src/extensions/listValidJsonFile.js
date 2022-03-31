@@ -18,7 +18,7 @@ module.exports = toolbox => {
           return {contents: {}}
         }
       })
-      .filter(({contents}) => contents.config?.env && Array.isArray(contents.dialogs) && contents.dialogs.every(abaBase64 => /^[\w+/]{100,}=*$/.test(abaBase64)))
+      .filter(({contents}) => contents.config && contents.config.env && Array.isArray(contents.dialogs) && contents.dialogs.every(abaBase64 => /^[\w+/]{100,}=*$/.test(abaBase64)))
     
     
     if (!fileList.length) throw { message: "Não foi encontrado nenhum arquivo JSON contendo as configurações do ALTU"};

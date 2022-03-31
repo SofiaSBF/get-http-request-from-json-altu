@@ -5,8 +5,8 @@ module.exports = toolbox => {
     const env_vars = {...file.contents.config.env }
     return file.contents.dialogs
     .map(abaBase64=> toolbox.getInfoAbaBase64({ abaBase64, env_vars, owner, bot:file.name }))
-    .reduce((nodes, aba)=>{
-        nodes.push(...aba)
+    .reduce((nodes, tab)=>{
+        nodes.push(...tab)
         return nodes
     },[])
   }

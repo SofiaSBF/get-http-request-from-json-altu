@@ -17,7 +17,7 @@ module.exports = toolbox => {
               bot: bot.replace(/\s+/g,'_').replace(/\W/g, ''),
               owner,
               node: node.node, 
-              aba: abaObj.name.replace(/\s+/g,'_').replace(/\W/g, ''), 
+              tab: abaObj.name.replace(/\s+/g,'_').replace(/\W/g, ''), 
               endpoint: node.parameters.config.url.replace(/\?.+?=.+$/g,'')
             }
           ))  

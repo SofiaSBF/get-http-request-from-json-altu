@@ -23,22 +23,26 @@ const command = {
 
 
     }catch(err){
-      print.error(err===''? "CLI abortada!" : ( err.message || 'Erro ao tentar ler o conteúdo arquivos') );
+      print.error(err===''? "CLI abortada!" : ( err.message || 'Erro ao tentar ler o conteúdo arquivos.') );
       return
     }
 
     try{
       var nodesInfo = files
         .map(file =>toolbox.getInfoFromFile({file,owner }))
-        .reduce((files, aba)=>{
-          files.push(...aba)
+        .reduce((files, tab)=>{
+          files.push(...tab)
           return files
       },[])
     }catch(err){
-      print.error(err.message || 'Erro ao tentar ler o conteúdo arquivos');
+      print.error(err.message || 'Erro ao tentar ler o conteúdo arquivos.');
       return
     }
-    toolbox.generateCSV({nodesInfo})
+    try{
+      toolbox.generateCSV({nodesInfo})
+    }catch(err){
+      print.error(err.message || 'Erro ao tentar gerar o arquivo CSV.')
+    }
   }
 }
 

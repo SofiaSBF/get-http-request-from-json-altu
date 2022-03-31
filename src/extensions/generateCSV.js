@@ -13,7 +13,7 @@ module.exports = toolbox => {
       props: { nodesInfo }
     })
 
-    info(`Arquivo criado!!`)
+    info(`Arquivo criado!`)
 
   }
 
