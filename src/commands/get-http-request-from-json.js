@@ -11,7 +11,14 @@ const command = {
       return
     }
 
-    
+    try{
+      var nodesInfo = files.map(file => toolbox.getInfoFromFile(file))
+    }catch(err){
+      print.error(err.message || 'Erro ao tentar ler o conteúdo arquivos');
+      return
+    }
+
+
   }
 }
 
