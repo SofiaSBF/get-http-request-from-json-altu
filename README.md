@@ -4,12 +4,13 @@ Extrai todos as informações do http request do ALTU e gera um CSV
 # Tutorial 
 ## Instalação
 1. Clone esse repositório na sua maquina via terminal (Linux). 
-  - Execute o comando no local que deseja clonar ```git clone git@github.com:cesargos/get-http-request-from-json-altu.git```
+  - Execute o comando no local que deseja clonar: 
+  ```git clone git@github.com:cesargos/get-http-request-from-json-altu.git```
 3. Entre na pasta raiz dele via terminal (Linux)
   - ```cd get-http-request-from-json-altu```
 4. Execute os seguintes comandos para instalar:
-  a. ```npm install```
-  a. ```npm link```
+  - ```npm install```
+  - ```npm link```
 
 ## Executando a CLI
 1. Entre no Bot que deseja mapear os Actions http_request
